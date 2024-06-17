@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Just Cart</a>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
+        <div class="cart-button-container">
+            <button id="cart-button">cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </nav>
+    <div class="loading">Loading...</div>
+    <div id="products-container" class="products-container"></div>
+    <div class="cart" id="cart">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0.00</span></p>
+        <button id="order-now-button" class="order-now" style="display: none;">Order Now</button>
+        </div>
+    </div>
+    <div id="payment-message" class="payment-message">
+        <p>Amount due: $<span id="payment-amount">0.00</span></p>
+        <button id="confirm-payment-button">Confirm Payment</button>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a team of passionate individuals committed to providing the best services.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h3>Email Me</h3>
+                <form id="contactForm">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+                <p id="email-message"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 YourWebsite | Designed by You
+        </div>
+    </footer>
+
+
+    <script src="index.js" defer></script>
+</body>
+</html>
