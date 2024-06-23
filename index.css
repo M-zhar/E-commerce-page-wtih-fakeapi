@@ -5,14 +5,33 @@
     box-sizing: border-box;
 }
 
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+}
 
+/* Flexbox layout for body */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grow and shrink main content as necessary */
+main {
+    flex: 1 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Footer styling to ensure it sticks at the bottom */
 footer {
+    margin-top:70px;
+    flex-shrink: 0;
     background: #333;
     color: #fff;
     padding: 20px 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
 .footer-content {
@@ -57,79 +76,6 @@ footer {
     border-top: 1px solid #444;
 }
 
-.contact-form input[type="email"] {
-    padding: 10px;
-    width: calc(100% - 22px);
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background: #555;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-}
-
-.contact-form button:hover {
-    background: #777;
-}
-
-#email-message {
-    margin-top: 10px;
-    color: #ff0;
-}
-
-
-
-
-/* Navbar styles */
-.navathbar {
-    position: fixed; /* Added to fix navbar at the top */
-    top: 0; /* Ensure it sticks to the top of the viewport */
-    left: 0; /* Align navbar from the left side of the viewport */
-    right: 0; /* Ensure navbar spans the width of the viewport */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Higher index to ensure navbar is above other content */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .navbar .logo a {
-        margin-right: 10px; /* Reduce margin in smaller screens */
-    }
-    .navbar ul {
-        display: none; /* Optionally hide navbar links on smaller screens */
-    }
-    .navbar .menu-icon {
-        display: block; /* Show menu icon on small devices */
-        cursor: pointer;
-    }
-    .search-container input[type="text"] {
-        width: 150px; /* Smaller input field on small devices */
-    }
-}
-
-/* Navbar styles */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* Navbar styles */
 .navbar {
     position: fixed;
@@ -147,7 +93,7 @@ body {
 }
 
 .navbar .logo a {
-    margin-right:400px;
+    margin-right: 400px;
     font-size: 24px;
     font-weight: bold;
     color: #007BFF;
@@ -179,22 +125,22 @@ body {
     width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px; /* Rounded corners for left side */
-    outline: none; /* Remove outline on focus */
+    border-radius: 4px 0 0 4px;
+    outline: none;
 }
 
 .search-container button {
     padding: 10px 20px;
     border: 1px solid #ccc;
-    background-color: #007BFF; /* Blue background color */
+    background-color: #007BFF;
     color: white;
-    border-radius: 0 4px 4px 0; /* Rounded corners for right side */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .search-container button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .cart-button-container {
@@ -217,10 +163,8 @@ body {
 }
 
 /* For product styles */
-
-
 .products-container {
-    margin-top: 40px;
+    margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -228,7 +172,7 @@ body {
 }
 
 .cart {
-    display: none; /* Initially hidden */
+    display: none;
     position: fixed;
     right: 0;
     top: 0;
@@ -241,12 +185,9 @@ body {
     z-index: 1000;
 }
 
-
-
 .cart.show {
     display: block;
 }
-
 
 .product-card {
     background-color: #fff;
@@ -255,7 +196,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    height:605;
+    height: 605px;
 }
 
 .product-image {
@@ -327,13 +268,20 @@ body {
     color: white;
     border: none;
     padding: 1em;
-    width: 100%;
     cursor: pointer;
     margin-top: 1em;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.order-now:hover {
+    background-color: #218838;
 }
 
 .payment-message {
-    display: none; /* Initially hidden */
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -356,4 +304,8 @@ body {
     border: none;
     padding: 1em;
     cursor: pointer;
+}
+
+.payment-message button:hover {
+    background-color: #218838;
 }
