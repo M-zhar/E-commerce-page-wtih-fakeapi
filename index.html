@@ -25,23 +25,23 @@
             <button id="cart-button">cart (<span id="cart-count">0</span>)</button>
         </div>
     </nav>
-    <div class="loading">Loading...</div>
-    <div id="products-container" class="products-container"></div>
-    <div class="cart" id="cart">
-        <h2>Cart</h2>
-        <div id="cart-items"></div>
-        <div class="cart-summary">
-            <p>Total Items: <span id="total-items">0</span></p>
-            <p>Total Price: $<span id="total-price">0.00</span></p>
-        <button id="order-now-button" class="order-now" style="display: none;">Order Now</button>
+    <main>
+        <div class="loading">Loading...</div>
+        <div id="products-container" class="products-container"></div>
+        <div class="cart" id="cart">
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: $<span id="total-price">0.00</span></p>
+                <button id="order-now-button" class="order-now" style="display: none;">Order Now</button>
+            </div>
         </div>
-    </div>
-    <div id="payment-message" class="payment-message">
-        <p>Amount due: $<span id="payment-amount">0.00</span></p>
-        <button id="confirm-payment-button">Confirm Payment</button>
-    </div>
-
-
+        <div id="payment-message" class="payment-message">
+            <p>Amount due: $<span id="payment-amount">0.00</span></p>
+            <button id="confirm-payment-button">Confirm Payment</button>
+        </div>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
@@ -70,8 +70,6 @@
             &copy; 2024 YourWebsite | Designed by You
         </div>
     </footer>
-
-
     <script src="index.js" defer></script>
 </body>
 </html>
