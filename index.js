@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(res => res.json())
         .then(data => {
             loadingElement.style.display = 'none'; // Hide loading text
-            products = data.slice(0, 60);
+            products = data.slice(0, 30);
             displayProducts(products);
         })
         .catch(error => {
